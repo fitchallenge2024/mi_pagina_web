@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Progresos</h1>
+    </header>
+    <main>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="photo">Sube tu foto de progreso:</label>
+            <input type="file" id="photo" name="photo" required>
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" name="description" required>
+            <button type="submit">Subir Foto</button>
+        </form>
+
+        <section class="progress-gallery">
+            <h2>Tu progreso</h2>
+            <div id="gallery">
+                <!-- Las fotos y descripciones se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/uploads/data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const gallery = document.getElementById('gallery');
+                    gallery.innerHTML = ""; // Limpiar el contenido del div gallery
+                    data.forEach(fileData => {
+                        const div = document.createElement('div');
+                        div.classList.add('photo-entry');
+
+                        const img = document.createElement('img');
+                        img.src = fileData.path;
+                        img.alt = 'Foto de progreso';
+
+                        const p = document.createElement('p');
+                        p.textContent = fileData.description;
+
+                        const form = document.createElement('form');
+                        form.action = '/delete';
+                        form.method = 'post';
+
+                        const input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = 'path';
+                        input.value = fileData.path;
+
+                        const button = document.createElement('button');
+                        button.type = 'submit';
+                        button.textContent = 'Borrar Foto';
+
+                        form.appendChild(input);
+                        form.appendChild(button);
+
+                        div.appendChild(img);
+                        div.appendChild(p);
+                        div.appendChild(form);
+                        gallery.appendChild(div);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

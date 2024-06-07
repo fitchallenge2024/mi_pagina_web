@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fdf0e6; /* Fondo claro */
+}
+
+header {
+    background-color: #ff6f61; /* Color salmón */
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+header a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    color: #ff6f61; /* Color salmón */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header a:hover {
+    background-color: #ffe6e1; /* Fondo claro */
+}
+
+header a.login-button {
+    margin-left: 1em;
+}
+
+main {
+    padding: 2em;
+}
+
+.motivational-quote {
+    background-color: #ff6f61; /* Color salmón */
+    color: white;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#diet-section {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#calories-input {
+    padding: 0.5em;
+    font-size: 1em;
+    margin-right: 1em;
+}
+
+#generate-diet-button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background-color: #ff6f61; /* Color salmón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#generate-diet-button:hover {
+    background-color: #e65c50; /* Color salmón oscuro */
+}
+
+.meal {
+    border: 1px solid #ddd;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.meal h3 {
+    margin: 0 0 0.5em 0;
+}
+
+.meal p {
+    margin: 0.5em 0;
+}
+
+/* Estilos para la página de menú */
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.menu-buttons button {
+    padding: 1em 2em;
+    margin: 0 1em;
+    font-size: 1.2em;
+    background-color: #ff6f61; /* Color salmón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-buttons button:hover {
+    background-color: #e65c50; /* Color salmón oscuro */
+}
+
+/* Estilos para las páginas de registro e inicio de sesión */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-container input[type="submit"] {
+    background-color: #ff6f61; /* Color salmón */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #e65c50; /* Color salmón oscuro */
+}
+
+.form-container p {
+    text-align: center;
+}
+.form-container a {
+    color: #ff6f61; /* Color salmón */
+    text-decoration: none;
+}
+.form-container a:hover {
+    text-decoration: underline;
+}
